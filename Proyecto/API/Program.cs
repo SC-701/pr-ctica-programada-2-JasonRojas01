@@ -1,3 +1,10 @@
+using Abstracciones.BC;
+using Abstracciones.BW;
+using Abstracciones.DA;
+using BC;
+using BW;
+using DA;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +13,11 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddScoped<IRepositorioDapper, RepositorioDapper>();
+builder.Services.AddScoped<IPersonaDA, PersonaDA>();
+builder.Services.AddScoped<IPersonaBW, PersonaBW>();
+builder.Services.AddScoped<IPersonaBC, PersonaBC>();
 
 var app = builder.Build();
 

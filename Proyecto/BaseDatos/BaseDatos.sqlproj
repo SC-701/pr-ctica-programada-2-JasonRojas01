@@ -58,11 +58,15 @@
     <Folder Include="Properties" />
     <Folder Include="dbo\" />
     <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Stored Procedures\" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="dbo\Tables\PokemonxEquipos.sql" />
-    <Build Include="dbo\Tables\Pokemon.sql" />
-    <Build Include="dbo\Tables\Equipos.sql" />
-    <Build Include="dbo\Tables\Entrenadores.sql" />
+    <Build Include="dbo\Tables\Persona.sql" />
+    <Build Include="dbo\Stored Procedures\ObtenerTodosPersona.sql" />
+    <Build Include="dbo\Stored Procedures\ObtenerPersona.sql" />
+    <Build Include="dbo\Stored Procedures\ObtenerCantidadPersona.sql" />
+    <Build Include="dbo\Stored Procedures\EliminarPersona.sql" />
+    <Build Include="dbo\Stored Procedures\AgregarPersona.sql" />
+    <Build Include="dbo\Stored Procedures\ActualizarPersona.sql" />
   </ItemGroup>
 </Project>
