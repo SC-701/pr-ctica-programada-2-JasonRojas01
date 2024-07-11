@@ -23,24 +23,14 @@ namespace BW
             return await _tareaDA.AgregarAsync(tarea);
         }
 
-        public async Task<Guid> Editar(Tarea tarea)
+        public async Task<Guid> Editar(Abstracciones.Modelos.Tarea tarea)
         {
-            var tareaExistente = await _tareaDA.ObtenerTodas(tarea.Id);
-            if (tareaExistente == null)
-            {
-                return Guid.Empty;
-            }
             return await _tareaDA.Editar(tarea);
         }
 
-        public async Task<Guid> Eliminar(Guid Id)
-        {
-            var tareaExistente = await _tareaDA.ObtenerTodas(Id);
-            if (tareaExistente == null)
+        public Task<Guid> Eliminar(Guid Id)
             {
-                return Guid.Empty;
-            }
-            return await _tareaDA.Eliminar(Id);
+            return _tareaDA.Eliminar(Id);
         }
 
         public Task<IEnumerable<Abstracciones.Modelos.Tarea>> Obtener()
