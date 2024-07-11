@@ -64,5 +64,7 @@
     <Build Include="dbo\Tables\Usuario.sql" />
     <Build Include="dbo\Tables\Tareas.sql" />
     <Build Include="dbo\SP\CrearUsuario.sql" />
+    <Build Include="dbo\SP\CrearTarea.sql" />
+    <Build Include="dbo\SP\EliminarTarea.sql" />
   </ItemGroup>
 </Project>

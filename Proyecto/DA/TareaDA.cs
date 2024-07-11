@@ -22,13 +22,17 @@ namespace DA
             await _sqlConnection.QueryAsync<Abstracciones.Entidades.Tarea>(sql, new { Id = tarea.Id, Nombre = tarea.Nombre, Descripcion = tarea.Descripcion, FechaIni = tarea.FechaIni, Asignado = tarea.Asignado, Estado = tarea.Estado });
             return tarea.Id;
         }
-        public Task<Guid> Editar(Tarea tarea)
+        public async Task<Guid> Editar(Tarea tarea)
         {
-            throw new NotImplementedException();
+            string sql = @"UPDATE Tareas SET Nombre = @Nombre, Descripcion = @Descripcion, FechaIni = @FechaIni, Asignado = @Asignado, Estado = @Estado WHERE Id = @Id;;";
+            await _sqlConnection.QueryAsync<Abstracciones.Entidades.Tarea>(sql, new { Id = tarea.Id, Nombre = tarea.Nombre, Descripcion = tarea.Descripcion, FechaIni = tarea.FechaIni, Asignado = tarea.Asignado, Estado = tarea.Estado });
+            return tarea.Id;
         }
-        public Task<Guid> Eliminar(Guid Id)
+        public async Task<Guid> Eliminar(Guid Id)
         {
-            throw new NotImplementedException();
+            string sql = @"EliminarTarea";
+            await _sqlConnection.QueryAsync<Abstracciones.Entidades.Tarea>(sql, new { Id = Id });
+            return Id;
         }
 
         public async Task<IEnumerable<Tarea>> Obtener()

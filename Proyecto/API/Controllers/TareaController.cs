@@ -15,8 +15,8 @@ namespace API.Controllers
     {
         private readonly ITareaBW _tareaBW;
 
-        public TareaController(ITareaBW tareaBW) 
-        { 
+        public TareaController(ITareaBW tareaBW)
+        {
             _tareaBW = tareaBW;
         }
 
