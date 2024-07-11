@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Tareas]
 (
-	[Id] INT NOT NULL PRIMARY KEY,
+	[Id] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY,
     [Nombre] VARCHAR(MAX) NOT NULL, 
     [Descripcion] VARCHAR(MAX) NOT NULL, 
     [FechaIni] INT NOT NULL, 
