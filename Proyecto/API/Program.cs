@@ -1,10 +1,3 @@
-using Abstracciones.BC;
-using Abstracciones.BW;
-using Abstracciones.DA;
-using BC;
-using BW;
-using DA;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
