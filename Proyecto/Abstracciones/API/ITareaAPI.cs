@@ -8,16 +8,20 @@ using System.Threading.Tasks;
 
 namespace Abstracciones.API
 {
-    public interface IPersonaAPI
+    public interface ITareaAPI
     {
         [HttpGet]
         public Task<IActionResult> Obtener();
+
         [HttpGet]
-        public Task<IActionResult> Obtener(Guid Id);
+        public Task<IActionResult> ObtenerTodas(Guid Id);
+
         [HttpPost]
-        public Task<IActionResult> AgregarAsync(Persona persona);
+        public Task<IActionResult> AgregarAsync(Tarea tarea);
+
         [HttpPut]
-        public Task<IActionResult> Editar(Persona persona);
+        public Task<IActionResult> Editar(Tarea tarea);
+
         [HttpDelete]
         public Task<IActionResult> Eliminar(Guid Id);
     }

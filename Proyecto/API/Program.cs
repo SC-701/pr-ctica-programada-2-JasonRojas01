@@ -1,3 +1,9 @@
+using Abstracciones.BW;
+using Abstracciones.DA;
+using BW;
+using DA;
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -8,9 +14,13 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IRepositorioDapper, RepositorioDapper>();
-builder.Services.AddScoped<IPersonaDA, PersonaDA>();
-builder.Services.AddScoped<IPersonaBW, PersonaBW>();
-builder.Services.AddScoped<IPersonaBC, PersonaBC>();
+
+builder.Services.AddScoped<IUsuarioDA, UsuarioDA>();
+builder.Services.AddScoped<IUsuarioBW, UsuarioBW>();
+
+//builder.Services.AddScoped<ITeareaDA, TeareaDA>();
+//builder.Services.AddScoped<ITeareaBW, TeareaBW>();
+
 
 var app = builder.Build();
 

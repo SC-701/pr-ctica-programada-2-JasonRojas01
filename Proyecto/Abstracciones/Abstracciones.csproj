@@ -11,4 +11,10 @@
     <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="BC\" />
+    <Folder Include="SG\" />
+    <Folder Include="Validaciones\" />
+  </ItemGroup>
+
 </Project>
